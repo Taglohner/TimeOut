@@ -1,7 +1,7 @@
 
 import UIKit
 
-class MyProfileTableViewContoller: UITableViewController {
+class FavoritesTableViewController: UITableViewController {
     
     // MARK: Properties
     
@@ -13,15 +13,17 @@ class MyProfileTableViewContoller: UITableViewController {
         super.viewDidLoad()
         
         tableView.refreshControl = topRefreshControl
-//        tableView.separatorStyle = .none
-//        tableView.sectionHeaderHeight = 28
-        tableView.register(MyProfileTableViewCell.self, forCellReuseIdentifier: "myProfileCell")
-//        tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "RootHeader")
+        tableView.separatorStyle = .none
+        tableView.sectionHeaderHeight = 28
+        tableView.register(FavoritesTableViewCell.self, forCellReuseIdentifier: "favoritesCell")
+        //        tableView.register(Header.self, forHeaderFooterViewReuseIdentifier: "RootHeader")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        tableView.estimatedRowHeight = 340
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -30,9 +32,4 @@ class MyProfileTableViewContoller: UITableViewController {
         }
         topRefreshControl.endRefreshing()
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-
 }

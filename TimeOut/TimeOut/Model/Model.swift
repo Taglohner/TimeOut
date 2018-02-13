@@ -10,17 +10,17 @@ import Foundation
 
 struct Category {
     var name: String?
-    var restaurants: [Restaunt]?
+    var restaurants: [Restaurant]?
     
     static func sampleCategories() -> [Category] {
         
         /* --------- new category --------- */
         
-        var sponsoredRestaurants = [Restaunt]()
+        var sponsoredRestaurants = [Restaurant]()
         var sponsoredRestaurantsCategory = Category()
         sponsoredRestaurantsCategory.name = "Sponsored Restaurants"
         
-        var ippudo = Restaunt()
+        var ippudo = Restaurant()
         ippudo.id = 1
         ippudo.name = "Ippudo"
         ippudo.category = RestaurantCategory.japanese
@@ -29,7 +29,7 @@ struct Category {
         ippudo.rating = 9.0
         sponsoredRestaurants.append(ippudo)
         
-        var wagamama = Restaunt()
+        var wagamama = Restaurant()
         wagamama.id = 1
         wagamama.name = "Wagamama"
         wagamama.category = RestaurantCategory.japanese
@@ -38,7 +38,7 @@ struct Category {
         wagamama.rating = 9.0
         sponsoredRestaurants.append(wagamama)
         
-        var bananatree = Restaunt()
+        var bananatree = Restaurant()
         bananatree.id = 1
         bananatree.name = "Banana Tree"
         bananatree.category = RestaurantCategory.indian
@@ -52,11 +52,11 @@ struct Category {
         
         /* --------- new category --------- */
         
-        var bestRatedRestaurants = [Restaunt]()
+        var bestRatedRestaurants = [Restaurant]()
         var bestRatedRestaurantsCategory = Category()
         bestRatedRestaurantsCategory.name = "Best Rated"
         
-        var itsu = Restaunt()
+        var itsu = Restaurant()
         itsu.id = 1
         itsu.name = "Itsu"
         itsu.category = RestaurantCategory.japanese
@@ -64,13 +64,29 @@ struct Category {
         itsu.description = "Itsu is a Japanese style restaurant"
         bestRatedRestaurants.append(itsu)
         
+        var yazuSushi = Restaurant()
+        yazuSushi.id = 1
+        yazuSushi.name = "Yazu Sushi"
+        yazuSushi.category = RestaurantCategory.japanese
+        yazuSushi.imageName = ""
+        yazuSushi.description = "Itsu is a Japanese style restaurant"
+        bestRatedRestaurants.append(yazuSushi)
+        
+        var honiPoke = Restaurant()
+        honiPoke.id = 1
+        honiPoke.name = "Honi Poke"
+        honiPoke.category = RestaurantCategory.japanese
+        honiPoke.imageName = ""
+        honiPoke.description = "Itsu is a Japanese style restaurant"
+        bestRatedRestaurants.append(honiPoke)
+        
         bestRatedRestaurantsCategory.restaurants = bestRatedRestaurants
         
         return [sponsoredRestaurantsCategory, bestRatedRestaurantsCategory]
     }
 }
 
-struct Restaunt {
+struct Restaurant {
     var id: Int?
     var name: String?
     var category: RestaurantCategory?

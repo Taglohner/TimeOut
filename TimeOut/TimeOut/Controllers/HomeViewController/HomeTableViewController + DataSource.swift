@@ -17,24 +17,27 @@ extension HomeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.item == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
-            cell.categories = categories?[indexPath.row]
-            return cell
-        }
-        
-        if indexPath.item == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
-            cell.categories = categories?[indexPath.row]
-            return cell
-        }
-        
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeRegularTableViewCell
+        if let categories = categories {
             
-            cell.categories = categories?[indexPath.row]
-            return cell
+            for category in categories {
+            
+                if category.name == "Sponsored Restaurants" {
+                    
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
+                    cell.category = categories[indexPath.row]
+                    return cell
+                }
+                    
+                else {
+        
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
+                    cell.category = categories[indexPath.row]
+                    return cell
+                }
+            }
         }
+        
+    return UITableViewCell()
+        
     }
-    
 }

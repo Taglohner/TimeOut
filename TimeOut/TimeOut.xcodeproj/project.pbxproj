@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53D77624203344730030D0AE /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77623203344730030D0AE /* FavoritesTableViewController.swift */; };
+		53D77627203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77626203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift */; };
+		53D77629203345510030D0AE /* FavortiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77628203345510030D0AE /* FavortiesTableViewCell.swift */; };
 		E78613F620322BFC0044F0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E78613F520322BFC0044F0E1 /* Assets.xcassets */; };
 		E78613F920322BFC0044F0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78613F720322BFC0044F0E1 /* LaunchScreen.storyboard */; };
 		E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140020322D2A0044F0E1 /* TabBarController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53D77623203344730030D0AE /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		53D77626203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesTableViewContoller + DataSource.swift"; sourceTree = "<group>"; };
+		53D77628203345510030D0AE /* FavortiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavortiesTableViewCell.swift; sourceTree = "<group>"; };
 		E78613EB20322BFC0044F0E1 /* TimeOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78613F520322BFC0044F0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E78613F820322BFC0044F0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53D77625203344780030D0AE /* FavoritesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				53D77623203344730030D0AE /* FavoritesTableViewController.swift */,
+				53D77626203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift */,
+				53D77628203345510030D0AE /* FavortiesTableViewCell.swift */,
+			);
+			path = FavoritesViewController;
+			sourceTree = "<group>";
+		};
 		E78613E220322BFC0044F0E1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				E786140220322D300044F0E1 /* TabBarController */,
 				E786141120322DC40044F0E1 /* HomeViewController */,
 				E786141820322E370044F0E1 /* SearchViewController */,
+				53D77625203344780030D0AE /* FavoritesViewController */,
 				E786142120322E720044F0E1 /* MyProfileViewController */,
 			);
 			path = Controllers;
@@ -234,16 +251,19 @@
 				E786141D20322E6B0044F0E1 /* MyProfileTableViewCell.swift in Sources */,
 				E786141E20322E6B0044F0E1 /* MyProfileTableViewContoller.swift in Sources */,
 				E786141520322E310044F0E1 /* SearchCollectionViewCell.swift in Sources */,
+				53D77624203344730030D0AE /* FavoritesTableViewController.swift in Sources */,
 				E786141620322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift in Sources */,
 				E786140E20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift in Sources */,
 				E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */,
 				E7861425203231250044F0E1 /* Model.swift in Sources */,
+				53D77629203345510030D0AE /* FavortiesTableViewCell.swift in Sources */,
 				E786141F20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift in Sources */,
 				E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */,
 				E786140F20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift in Sources */,
 				E786142320322F370044F0E1 /* SearchCollectionViewController + DataSource.swift in Sources */,
 				E786142020322E6B0044F0E1 /* Header.swift in Sources */,
 				E786141720322E310044F0E1 /* SearchCollectionViewController.swift in Sources */,
+				53D77627203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift in Sources */,
 				E786140720322D4F0044F0E1 /* Extensions.swift in Sources */,
 				E786141020322DBF0044F0E1 /* HomeTableViewController.swift in Sources */,
 			);

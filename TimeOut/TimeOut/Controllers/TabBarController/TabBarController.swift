@@ -1,10 +1,3 @@
-//
-//  TabBarController.swift
-//  UITabBarController Programmatically
-//
-//  Created by Steven Taglohner on 29/01/2018.
-//  Copyright © 2018 Steven Taglohner. All rights reserved.
-//
 
 import UIKit
 
@@ -17,12 +10,15 @@ class TabBarController: UITabBarController {
         homeTableViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 0)
         
         let searchCollectionViewController = SearchCollectionViewController()
-        searchCollectionViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+        searchCollectionViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        
+        let favoritesTableViewController = FavoritesTableViewController()
+        favoritesTableViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         let myProfileTableViewContoller = MyProfileTableViewContoller()
-        myProfileTableViewContoller.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
+        myProfileTableViewContoller.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 3)
         
-        let viewControllerList = [homeTableViewController, searchCollectionViewController, myProfileTableViewContoller]
+        let viewControllerList = [homeTableViewController, searchCollectionViewController, favoritesTableViewController, myProfileTableViewContoller]
         
         viewControllers = viewControllerList.map {
             UINavigationController(rootViewController: $0)

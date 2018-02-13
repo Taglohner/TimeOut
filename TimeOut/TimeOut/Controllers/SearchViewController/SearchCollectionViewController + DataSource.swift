@@ -1,10 +1,3 @@
-//
-//  SearchCollectionViewController + DataSource.swift
-//  TimeOut
-//
-//  Created by Steven Taglohner on 12/02/2018.
-//  Copyright © 2018 Steven Taglohner. All rights reserved.
-//
 
 import UIKit
 
@@ -17,7 +10,7 @@ extension SearchCollectionViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
