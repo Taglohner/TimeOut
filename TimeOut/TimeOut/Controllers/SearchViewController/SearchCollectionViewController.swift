@@ -13,11 +13,6 @@ class SearchCollectionViewController: UIViewController, UICollectionViewDataSour
     // MARK: Properties
     
     var collectionView: UICollectionView!
-    
-    var postArray = [
-        
-        PostObject(title: "Office for Mac buying guide 2018", excerpt: "Everything you need to know about Office for Mac & which version you should buy", postPicture: #imageLiteral(resourceName: "Post1"), authorName: "Steven Taglöhner", authorPicture: #imageLiteral(resourceName: "Steven"), postDate: "Today", isFeatured: true)
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +28,7 @@ class SearchCollectionViewController: UIViewController, UICollectionViewDataSour
         
         // Setup collection view view properties
         
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .white
         
     }
 

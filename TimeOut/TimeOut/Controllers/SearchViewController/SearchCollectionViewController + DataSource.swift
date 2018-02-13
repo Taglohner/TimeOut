@@ -17,12 +17,11 @@ extension SearchCollectionViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return postArray.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchCollectionViewControllerCell", for: indexPath) as! SearchCollectionViewCell
-        cell.post = postArray[indexPath.item]
         cell.backgroundColor = .orange
         return cell
     }

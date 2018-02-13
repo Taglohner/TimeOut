@@ -3,14 +3,9 @@ import UIKit
 
 class MyProfileTableViewContoller: UITableViewController {
     
-    let customLightGray = UIColor(r: 236, g: 236, b: 236, alpha: 1)
-
-    var postArray = [
-        
-        PostObject(title: "Office for Mac buying guide 2018", excerpt: "Everything you need to know about Office for Mac & which version you should buy", postPicture: #imageLiteral(resourceName: "Post1"), authorName: "Steven Taglöhner", authorPicture: #imageLiteral(resourceName: "Steven"), postDate: "Today", isFeatured: false)
-    ]
-    
     // MARK: Properties
+    
+    let customLightGray = UIColor(r: 236, g: 236, b: 236, alpha: 1)
     
     var topRefreshControl = UIRefreshControl()
     

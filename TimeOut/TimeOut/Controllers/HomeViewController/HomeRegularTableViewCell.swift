@@ -5,10 +5,10 @@ class HomeRegularTableViewCell: UITableViewCell {
     
     var categories: Category? {
         didSet {
-            
-//            guard let categories = categories else {
-//                return
-//            }
+            //            guard let categories = categories else {
+            //                return
+            //
+            //            }
         }
     }
     

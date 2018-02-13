@@ -9,7 +9,7 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +21,7 @@ class TabBarController: UITabBarController {
         
         let myProfileTableViewContoller = MyProfileTableViewContoller()
         myProfileTableViewContoller.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
-
+        
         let viewControllerList = [homeTableViewController, searchCollectionViewController, myProfileTableViewContoller]
         
         viewControllers = viewControllerList.map {

@@ -10,123 +10,79 @@ import Foundation
 
 struct Category {
     var name: String?
-    var business: [Business]?
+    var restaurants: [Restaunt]?
     
     static func sampleCategories() -> [Category] {
         
-        var restaurants = [Business]()
-        
         /* --------- new category --------- */
-        var sponseredRestaurantCategory = Category()
-        sponseredRestaurantCategory.name = "Restaurants"
         
-        var ippudo = Business()
+        var sponsoredRestaurants = [Restaunt]()
+        var sponsoredRestaurantsCategory = Category()
+        sponsoredRestaurantsCategory.name = "Sponsored Restaurants"
+        
+        var ippudo = Restaunt()
         ippudo.id = 1
         ippudo.name = "Ippudo"
-        ippudo.category = "Restaurants"
+        ippudo.category = RestaurantCategory.japanese
         ippudo.imageName = ""
-        ippudo.description = "Ippudo is a Japanese style restaurant founded"
-        restaurants.append(ippudo)
+        ippudo.description = "Ippudo is a Japanese style restaurant"
+        ippudo.rating = 9.0
+        sponsoredRestaurants.append(ippudo)
         
-        var itsu = Business()
-        itsu.id = 2
-        itsu.name = "Itsu"
-        itsu.category = "Restaurants"
-        itsu.imageName = ""
-        itsu.description = "itsu is a Japanese style restaurant founded"
-        restaurants.append(itsu)
-        
-        var wagamama = Business()
+        var wagamama = Restaunt()
         wagamama.id = 1
-        wagamama.name = "wagamama"
-        wagamama.category = "Restaurants"
+        wagamama.name = "Wagamama"
+        wagamama.category = RestaurantCategory.japanese
         wagamama.imageName = ""
-        wagamama.description = "wagamama is a Japanese style restaurant founded"
-        restaurants.append(wagamama)
+        wagamama.description = "Wagamama is a Japanese style restaurant"
+        wagamama.rating = 9.0
+        sponsoredRestaurants.append(wagamama)
         
-        var kfc = Business()
-        kfc.id = 1
-        kfc.name = "kfc"
-        kfc.category = "Restaurants"
-        kfc.imageName = ""
-        kfc.description = "kfc is a Japanese style restaurant founded"
-        restaurants.append(kfc)
+        var bananatree = Restaunt()
+        bananatree.id = 1
+        bananatree.name = "Banana Tree"
+        bananatree.category = RestaurantCategory.indian
+        bananatree.imageName = ""
+        bananatree.description = "Banana Tree is a indian style restaurant"
+        bananatree.rating = 9.0
+        sponsoredRestaurants.append(bananatree)
         
-        var dominos = Business()
-        dominos.id = 1
-        dominos.name = "dominos"
-        dominos.category = "Restaurants"
-        dominos.imageName = ""
-        dominos.description = "dominos is a Japanese style restaurant founded"
-        restaurants.append(dominos)
+        sponsoredRestaurantsCategory.restaurants = sponsoredRestaurants
         
-        var mcdonalds = Business()
-        mcdonalds.id = 1
-        mcdonalds.name = "mcdonalds"
-        mcdonalds.category = "Restaurants"
-        mcdonalds.imageName = ""
-        mcdonalds.description = "mcdonalds is a Japanese style restaurant founded"
-        restaurants.append(mcdonalds)
-        
-        sponseredRestaurantCategory.business = restaurants
         
         /* --------- new category --------- */
         
-        var pubs = [Business]()
-        var sponseredPubsCategory = Category()
-        sponseredPubsCategory.name = "Pubs"
+        var bestRatedRestaurants = [Restaunt]()
+        var bestRatedRestaurantsCategory = Category()
+        bestRatedRestaurantsCategory.name = "Best Rated"
         
-        var sherlock = Business()
-        sherlock.id = 1
-        sherlock.name = "Sherlock"
-        sherlock.category = "Pubs"
-        sherlock.imageName = ""
-        sherlock.description = "Sherlock was founded in 1982"
-        pubs.append(sherlock)
-        sponseredPubsCategory.business = pubs
+        var itsu = Restaunt()
+        itsu.id = 1
+        itsu.name = "Itsu"
+        itsu.category = RestaurantCategory.japanese
+        itsu.imageName = ""
+        itsu.description = "Itsu is a Japanese style restaurant"
+        bestRatedRestaurants.append(itsu)
         
-        var theworldsend = Business()
-        theworldsend.id = 2
-        theworldsend.name = "The Worlds End"
-        theworldsend.category = "Pubs"
-        theworldsend.imageName = ""
-        theworldsend.description = "The Worlds End was founded in 1982"
-        pubs.append(theworldsend)
+        bestRatedRestaurantsCategory.restaurants = bestRatedRestaurants
         
-        var thechappel = Business()
-        thechappel.id = 3
-        thechappel.name = "The Chappel"
-        thechappel.category = "Pubs"
-        thechappel.imageName = ""
-        thechappel.description = "The Chappel was founded in 1982"
-        pubs.append(thechappel)
-        
-        var bierhoff = Business()
-        bierhoff.id = 4
-        bierhoff.name = "Bier Hoff"
-        bierhoff.category = "Pubs"
-        bierhoff.imageName = ""
-        bierhoff.description = "Bier Hoff was founded in 1982"
-        pubs.append(bierhoff)
-        
-        var yellowhouse = Business()
-        yellowhouse.id = 5
-        yellowhouse.name = "Yellow House"
-        yellowhouse.category = "Pubs"
-        yellowhouse.imageName = ""
-        yellowhouse.description = "Yellow House was founded in 1982"
-        pubs.append(yellowhouse)
-        
-        sponseredPubsCategory.business = pubs
-
-        return [sponseredRestaurantCategory, sponseredPubsCategory]
+        return [sponsoredRestaurantsCategory, bestRatedRestaurantsCategory]
     }
 }
 
-struct Business {
+struct Restaunt {
     var id: Int?
     var name: String?
-    var category: String?
+    var category: RestaurantCategory?
     var imageName: String?
     var description: String?
+    var rating: Float?
+}
+
+enum RestaurantCategory {
+    case japanese
+    case italian
+    case british
+    case greek
+    case indian
 }

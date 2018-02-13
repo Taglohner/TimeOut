@@ -3,20 +3,12 @@ import UIKit
 
 class MyProfileTableViewCell: UITableViewCell {
     
-    var post: PostObject? {
-        didSet {
-            guard let post = post else {
-                return
-            }
-            
-            postTitle.text = post.title
-            postExcerpt.text = post.excerpt
-            postImage.image = post.postPicture
-            authorName.text = post.authorName
-            authorProfileImage.image = post.authorPicture
-            
-        }
-    }
+//    var profile: Profile? {
+//        didSet {
+//
+//
+//        }
+//    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

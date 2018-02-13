@@ -12,10 +12,13 @@ class HomeTableViewController: UITableViewController {
         
         tableView.register(HomeRegularTableViewCell.self, forCellReuseIdentifier: "homeTableViewCell")
         tableView.register(HomeTableCollectionViewCell.self, forCellReuseIdentifier: "homeTableCollectionViewCell")
+        
+        tableView.separatorStyle = .none
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 290
     }
     
     

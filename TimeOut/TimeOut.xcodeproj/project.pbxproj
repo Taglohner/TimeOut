@@ -25,7 +25,6 @@
 		E786142020322E6B0044F0E1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786141C20322E6B0044F0E1 /* Header.swift */; };
 		E786142320322F370044F0E1 /* SearchCollectionViewController + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786142220322F370044F0E1 /* SearchCollectionViewController + DataSource.swift */; };
 		E7861425203231250044F0E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7861424203231250044F0E1 /* Model.swift */; };
-		E7861428203232E10044F0E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7861427203232E10044F0E1 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		E786141C20322E6B0044F0E1 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E786142220322F370044F0E1 /* SearchCollectionViewController + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchCollectionViewController + DataSource.swift"; sourceTree = "<group>"; };
 		E7861424203231250044F0E1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		E7861427203232E10044F0E1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +123,8 @@
 			children = (
 				E786140C20322DBF0044F0E1 /* HomeTableViewController.swift */,
 				E786140B20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift */,
-				E786140920322DBF0044F0E1 /* HomeRegularTableViewCell.swift */,
 				E786140A20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift */,
+				E786140920322DBF0044F0E1 /* HomeRegularTableViewCell.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -156,7 +154,6 @@
 		E7861426203231280044F0E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E7861427203232E10044F0E1 /* Post.swift */,
 				E7861424203231250044F0E1 /* Model.swift */,
 			);
 			path = Model;
@@ -237,7 +234,6 @@
 				E786141D20322E6B0044F0E1 /* MyProfileTableViewCell.swift in Sources */,
 				E786141E20322E6B0044F0E1 /* MyProfileTableViewContoller.swift in Sources */,
 				E786141520322E310044F0E1 /* SearchCollectionViewCell.swift in Sources */,
-				E7861428203232E10044F0E1 /* Post.swift in Sources */,
 				E786141620322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift in Sources */,
 				E786140E20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift in Sources */,
 				E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */,

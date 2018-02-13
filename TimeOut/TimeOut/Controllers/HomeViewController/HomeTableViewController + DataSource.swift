@@ -21,12 +21,20 @@ extension HomeTableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
             cell.categories = categories?[indexPath.row]
             return cell
-        } else {
+        }
+        
+        if indexPath.item == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableCollectionViewCell", for: indexPath) as! HomeTableCollectionViewCell
+            cell.categories = categories?[indexPath.row]
+            return cell
+        }
+        
+        else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell", for: indexPath) as! HomeRegularTableViewCell
+            
             cell.categories = categories?[indexPath.row]
             return cell
         }
     }
-    
     
 }

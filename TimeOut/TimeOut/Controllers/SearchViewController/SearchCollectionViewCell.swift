@@ -3,11 +3,11 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
-    var post: PostObject? {
-        didSet {
-            
-        }
-    }
+//    var category: Category? {
+//        didSet {
+//
+//        }
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,7 +17,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     private func setupLayout() {
         
