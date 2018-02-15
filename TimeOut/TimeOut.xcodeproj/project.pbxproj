@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53CE3B0E2035A454001C2EC4 /* CategoriesViewModelItemsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3B0D2035A454001C2EC4 /* CategoriesViewModelItemsType.swift */; };
+		53CE3B102035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3B0F2035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift */; };
+		53CE3B122035A813001C2EC4 /* RestaurantCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE3B112035A813001C2EC4 /* RestaurantCategoriesViewModel.swift */; };
 		53D77624203344730030D0AE /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77623203344730030D0AE /* FavoritesTableViewController.swift */; };
 		53D77627203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77626203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift */; };
 		53D77629203345510030D0AE /* FavortiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D77628203345510030D0AE /* FavortiesTableViewCell.swift */; };
@@ -17,7 +20,6 @@
 		E786140720322D4F0044F0E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140520322D4F0044F0E1 /* Extensions.swift */; };
 		E786140D20322DBF0044F0E1 /* HomeRegularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140920322DBF0044F0E1 /* HomeRegularTableViewCell.swift */; };
 		E786140E20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140A20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift */; };
-		E786140F20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140B20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift */; };
 		E786141020322DBF0044F0E1 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140C20322DBF0044F0E1 /* HomeTableViewController.swift */; };
 		E786141520322E310044F0E1 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786141220322E300044F0E1 /* SearchCollectionViewCell.swift */; };
 		E786141620322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786141320322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift */; };
@@ -27,10 +29,13 @@
 		E786141F20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786141B20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift */; };
 		E786142020322E6B0044F0E1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786141C20322E6B0044F0E1 /* Header.swift */; };
 		E786142320322F370044F0E1 /* SearchCollectionViewController + DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786142220322F370044F0E1 /* SearchCollectionViewController + DataSource.swift */; };
-		E7861425203231250044F0E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7861424203231250044F0E1 /* Model.swift */; };
+		E7861425203231250044F0E1 /* RestaurantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7861424203231250044F0E1 /* RestaurantCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53CE3B0D2035A454001C2EC4 /* CategoriesViewModelItemsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModelItemsType.swift; sourceTree = "<group>"; };
+		53CE3B0F2035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCategoryViewModelItem.swift; sourceTree = "<group>"; };
+		53CE3B112035A813001C2EC4 /* RestaurantCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCategoriesViewModel.swift; sourceTree = "<group>"; };
 		53D77623203344730030D0AE /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		53D77626203344D50030D0AE /* FavoritesTableViewContoller + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesTableViewContoller + DataSource.swift"; sourceTree = "<group>"; };
 		53D77628203345510030D0AE /* FavortiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavortiesTableViewCell.swift; sourceTree = "<group>"; };
@@ -43,7 +48,6 @@
 		E786140520322D4F0044F0E1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E786140920322DBF0044F0E1 /* HomeRegularTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRegularTableViewCell.swift; sourceTree = "<group>"; };
 		E786140A20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableCollectionViewCell.swift; sourceTree = "<group>"; };
-		E786140B20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeTableViewController + DataSource.swift"; sourceTree = "<group>"; };
 		E786140C20322DBF0044F0E1 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E786141220322E300044F0E1 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		E786141320322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchCollectionViewController + DelegateFlowLayout.swift"; sourceTree = "<group>"; };
@@ -53,7 +57,7 @@
 		E786141B20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyProfileTableViewContoller + DataSource.swift"; sourceTree = "<group>"; };
 		E786141C20322E6B0044F0E1 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E786142220322F370044F0E1 /* SearchCollectionViewController + DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchCollectionViewController + DataSource.swift"; sourceTree = "<group>"; };
-		E7861424203231250044F0E1 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E7861424203231250044F0E1 /* RestaurantCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				E786140C20322DBF0044F0E1 /* HomeTableViewController.swift */,
-				E786140B20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift */,
 				E786140A20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift */,
 				E786140920322DBF0044F0E1 /* HomeRegularTableViewCell.swift */,
 			);
@@ -171,7 +174,10 @@
 		E7861426203231280044F0E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E7861424203231250044F0E1 /* Model.swift */,
+				E7861424203231250044F0E1 /* RestaurantCategory.swift */,
+				53CE3B0F2035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift */,
+				53CE3B0D2035A454001C2EC4 /* CategoriesViewModelItemsType.swift */,
+				53CE3B112035A813001C2EC4 /* RestaurantCategoriesViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,14 +258,16 @@
 				E786141E20322E6B0044F0E1 /* MyProfileTableViewContoller.swift in Sources */,
 				E786141520322E310044F0E1 /* SearchCollectionViewCell.swift in Sources */,
 				53D77624203344730030D0AE /* FavoritesTableViewController.swift in Sources */,
+				53CE3B102035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift in Sources */,
 				E786141620322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift in Sources */,
 				E786140E20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift in Sources */,
 				E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */,
-				E7861425203231250044F0E1 /* Model.swift in Sources */,
+				E7861425203231250044F0E1 /* RestaurantCategory.swift in Sources */,
+				53CE3B0E2035A454001C2EC4 /* CategoriesViewModelItemsType.swift in Sources */,
 				53D77629203345510030D0AE /* FavortiesTableViewCell.swift in Sources */,
 				E786141F20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift in Sources */,
 				E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */,
-				E786140F20322DBF0044F0E1 /* HomeTableViewController + DataSource.swift in Sources */,
+				53CE3B122035A813001C2EC4 /* RestaurantCategoriesViewModel.swift in Sources */,
 				E786142320322F370044F0E1 /* SearchCollectionViewController + DataSource.swift in Sources */,
 				E786142020322E6B0044F0E1 /* Header.swift in Sources */,
 				E786141720322E310044F0E1 /* SearchCollectionViewController.swift in Sources */,

@@ -3,9 +3,16 @@ import UIKit
 
 class HomeRegularTableViewCell: UITableViewCell {
     
-    var restaurant: Restaurant? {
-        didSet{
+    var item: RestaurantCategoryViewModelItem? {
+        
+        // Cast the ProfileViewModelItem to appropriate item type
+        
+        didSet {
             
+//            guard let item = item as? ViewModelItemTypeBestRated else {
+//                return
+//            }
+//            
             
         }
     }
@@ -56,10 +63,7 @@ class HomeRegularTableViewCell: UITableViewCell {
         
         [postImage, postTitle, postDate].forEach { addSubview($0) }
         
-        
         postImage.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 6, left: 4, bottom: 6, right: 4), size: .init(width: 64, height: 64))
-        
-        
         postTitle.anchor(top: postImage.topAnchor, leading: postImage.trailingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 40))
         postDate.anchor(top: postTitle.bottomAnchor, leading: postTitle.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 2, left: 0, bottom: 0, right: 0), size: .init(width: 100, height: 20))
     }

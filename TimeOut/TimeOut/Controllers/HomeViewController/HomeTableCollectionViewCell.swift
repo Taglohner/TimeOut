@@ -3,9 +3,16 @@ import UIKit
 
 class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var category: Category? {
-        didSet{
-            
+    var item: RestaurantCategoryViewModelItem? {
+        
+        // Cast the ProfileViewModelItem to appropriate item type
+        
+        didSet {
+//            
+//            guard let item = item as? ViewModelItemTypeBestRated else {
+//                return
+//            }
+
             
         }
     }
@@ -60,9 +67,6 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
     // Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let count = category?.restaurants?.count {
-            return count
-        }
         return 0
     }
     
