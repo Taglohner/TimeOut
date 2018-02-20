@@ -3,16 +3,19 @@ import UIKit
 
 class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var items: ViewModelItemTypeBestRated?
     var item: RestaurantCategoryViewModelItem? {
         
         // Cast the ProfileViewModelItem to appropriate item type
         
         didSet {
-//            
-//            guard let item = item as? ViewModelItemTypeBestRated else {
-//                return
-//            }
-
+            
+            guard let item = item as? ViewModelItemTypeBestRated else {
+                return
+            }
+            
+            items = item
+            featuredCollectionView.reloadData()
             
         }
     }
@@ -28,17 +31,6 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    let categoryLabel: UILabel = {
-        let labelView = UILabel()
-        labelView.backgroundColor = .green
-        labelView.textAlignment = .justified
-        labelView.font = .boldSystemFont(ofSize: 26)
-        labelView.textColor = .black
-        labelView.text = "Category Name"
-        labelView.translatesAutoresizingMaskIntoConstraints = false
-        return labelView
-    }()
     
     let featuredCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -57,47 +49,57 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
         featuredCollectionView.dataSource = self
         featuredCollectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: "homeCollectionViewCell")
         
-        [featuredCollectionView, categoryLabel].forEach { addSubview($0) }
+        [featuredCollectionView].forEach { addSubview($0) }
         
-        categoryLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 4, left: 4, bottom: 0, right: 4), size: .init(width: 0, height: 40))
-        
-        featuredCollectionView.anchor(top: categoryLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        featuredCollectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
     }
     
     // Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        guard let count = items?.restaurants.count else {
+            return 0
+        }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeCollectionViewCell
-        
+        cell.restaurant = items?.restaurants[indexPath.item]
         return cell
     }
     
     // Layout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 310, height: 238)
+        return CGSize(width: 310, height: 236)
     }
     
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    //        return CGFloat(12)
-    //    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(6, 6, 0, 6)
+        return UIEdgeInsetsMake(10, 10, 10, 10)
     }
 }
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
-    //    var post: PostObject? {
-    //        didSet{
-    //
-    //        }
-    //    }
+    var restaurant: Restaurant? {
+        // Cast the ProfileViewModelItem to appropriate item type
+        
+        didSet {
+            guard let restaurant = restaurant else {
+                return
+            }
+            
+            firstLabel.text = restaurant.name
+            
+            if let imageName = restaurant.imageName {
+                mainImage.image = UIImage(named: imageName)
+            } else {
+                mainImage.image = UIImage(named: "foodPlaceholder")
+            }
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -110,27 +112,27 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let mainImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .yellow
-        //        imageView.layer.cornerRadius = 0
+//        imageView.backgroundColor = .yellow
+//        imageView.layer.cornerRadius = 0
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //        imageView.layer.masksToBounds = false
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
     let favoriteButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .red
+//        button.backgroundColor = .red
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     let firstLabel: UILabel = {
         let labelView = UILabel()
-        labelView.backgroundColor = .blue
+//        labelView.backgroundColor = .blue
         labelView.textAlignment = .justified
         labelView.font = .boldSystemFont(ofSize: 24)
-        labelView.textColor = .white
+        labelView.textColor = .black
         labelView.text = "Restaurant Name"
         labelView.translatesAutoresizingMaskIntoConstraints = false
         return labelView
@@ -138,7 +140,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let secondLabel: UILabel = {
         let labelView = UILabel()
-        labelView.backgroundColor = .white
+//        labelView.backgroundColor = .white
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 20)
         labelView.textColor = .darkGray
@@ -149,17 +151,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let thirdLabel: UILabel = {
         let labelView = UILabel()
-        labelView.backgroundColor = .gray
+//        labelView.backgroundColor = .gray
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 20)
-        labelView.textColor = .white
-        labelView.text = "*****"
+        labelView.textColor = .black
+        labelView.text = " *****"
         labelView.translatesAutoresizingMaskIntoConstraints = false
         return labelView
     }()
     
     func setupViews() {
-        backgroundColor = .red
+//        backgroundColor = .red
         
         [mainImage, firstLabel, secondLabel, thirdLabel].forEach { self.addSubview($0) }
         mainImage.addSubview(favoriteButton)

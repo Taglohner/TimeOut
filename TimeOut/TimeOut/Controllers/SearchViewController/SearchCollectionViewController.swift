@@ -22,7 +22,6 @@ class SearchCollectionViewController: UIViewController, UICollectionViewDataSour
         // Setup collection view view properties
         
         collectionView.backgroundColor = .white
-        
     }
 
     /*

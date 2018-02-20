@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  WordPressApp
-//
-//  Created by Steven Taglohner on 31/01/2018.
-//  Copyright © 2018 Steven Taglohner. All rights reserved.
-//
 
 import UIKit
 import CoreData

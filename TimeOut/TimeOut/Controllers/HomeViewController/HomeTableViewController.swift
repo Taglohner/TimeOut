@@ -9,13 +9,12 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.dataSource = viewModel
-        tableView.register(HomeRegularTableViewCell.self, forCellReuseIdentifier: "homeTableViewCell")
+        tableView.delegate = viewModel
+        tableView.register(HomeRegularTableViewCell.self, forCellReuseIdentifier: "homeRegularTableViewCell")
         tableView.register(HomeTableCollectionViewCell.self, forCellReuseIdentifier: "homeTableCollectionViewCell")
+        tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: "HomeHeader")
         tableView.separatorStyle = .none
-    }
-     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        
     }
 }
 

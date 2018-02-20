@@ -12,7 +12,7 @@ struct RestaurantCategory {
         ippudo.id = 1
         ippudo.name = "Ippudo"
         ippudo.cousine = .japanese
-        ippudo.imageName = ""
+        ippudo.imageName = "mobile_picture_02202018_222018"
         ippudo.description = "Ippudo is a Japanese style restaurant"
         ippudo.rating = 9.0
         restaurants.append(ippudo)
@@ -21,7 +21,7 @@ struct RestaurantCategory {
         wagamama.id = 1
         wagamama.name = "Wagamama"
         wagamama.cousine = .japanese
-        wagamama.imageName = ""
+        wagamama.imageName = "mobile_picture_02202018_232948"
         wagamama.description = "Wagamama is a Japanese style restaurant"
         wagamama.rating = 9.0
         restaurants.append(wagamama)
@@ -30,7 +30,7 @@ struct RestaurantCategory {
         bananatree.id = 1
         bananatree.name = "Banana Tree"
         bananatree.cousine = .indian
-        bananatree.imageName = ""
+        bananatree.imageName = "mobile_picture_02202018_233153"
         bananatree.description = "Banana Tree is a indian style restaurant"
         bananatree.rating = 9.0
         restaurants.append(bananatree)
@@ -39,7 +39,7 @@ struct RestaurantCategory {
         itsu.id = 1
         itsu.name = "Itsu"
         itsu.cousine = .japanese
-        itsu.imageName = ""
+        itsu.imageName = "mobile_picture_02202018_233519"
         itsu.description = "Itsu is a Japanese style restaurant"
         restaurants.append(itsu)
         
@@ -47,7 +47,7 @@ struct RestaurantCategory {
         yazuSushi.id = 1
         yazuSushi.name = "Yazu Sushi"
         yazuSushi.cousine = .japanese
-        yazuSushi.imageName = ""
+        yazuSushi.imageName = nil
         yazuSushi.description = "Itsu is a Japanese style restaurant"
         restaurants.append(yazuSushi)
         
@@ -55,7 +55,7 @@ struct RestaurantCategory {
         honiPoke.id = 1
         honiPoke.name = "Honi Poke"
         honiPoke.cousine = .japanese
-        honiPoke.imageName = ""
+        honiPoke.imageName = nil
         honiPoke.description = "Itsu is a Japanese style restaurant"
         restaurants.append(honiPoke)
         

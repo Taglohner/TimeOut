@@ -11,7 +11,7 @@ class ViewModelItemTypeBestRated: RestaurantCategoryViewModelItem {
     }
     
     var rowCount: Int {
-        return restaurants.count
+        return 1
     }
     
     var restaurants: [Restaurant]
@@ -31,7 +31,7 @@ class ViewModelItemTypeSponsored: RestaurantCategoryViewModelItem {
     }
     
     var rowCount: Int {
-        return restaurants.count
+        return 1
     }
     
     var restaurants: [Restaurant]

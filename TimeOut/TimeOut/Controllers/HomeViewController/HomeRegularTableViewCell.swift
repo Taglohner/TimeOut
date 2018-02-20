@@ -9,10 +9,12 @@ class HomeRegularTableViewCell: UITableViewCell {
         
         didSet {
             
-//            guard let item = item as? ViewModelItemTypeBestRated else {
-//                return
-//            }
-//            
+            guard let item = item as? ViewModelItemTypeBestValue else {
+                return
+            }
+            
+            
+            
             
         }
     }
