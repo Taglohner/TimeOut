@@ -12,9 +12,9 @@ class HomeTableViewController: UITableViewController {
         tableView.delegate = viewModel
         tableView.register(HomeRegularTableViewCell.self, forCellReuseIdentifier: "homeRegularTableViewCell")
         tableView.register(HomeTableCollectionViewCell.self, forCellReuseIdentifier: "homeTableCollectionViewCell")
-//        tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: "HomeHeader")
         tableView.separatorStyle = .none
-        
+
+
     }
 }
 

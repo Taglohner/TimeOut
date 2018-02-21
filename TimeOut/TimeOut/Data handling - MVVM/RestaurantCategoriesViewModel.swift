@@ -39,8 +39,14 @@ extension RestaurantCategoryViewModel: UITableViewDataSource {
             
         case .bestValue:
             
+            var restaurant: Restaurant?
+            
+            if let item = item as? ViewModelItemTypeBestValue {
+                restaurant = item.restaurants[indexPath.row]
+            }
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeRegularTableViewCell", for: indexPath) as! HomeRegularTableViewCell
-            cell.item = item
+            cell.restaurant = restaurant
             return cell
             
         case .sponsored:
@@ -59,23 +65,12 @@ extension RestaurantCategoryViewModel: UITableViewDelegate {
         
         switch item.type {
         case .bestRated:
-            return 320
+            return 300
         case .bestValue:
-            return 150
+            return 260
         case .sponsored:
-            return 320
+            return 300
         }
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let item = items[section]
-//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeader") as! HomeHeader
-//        header.headerTitle = (" \(item.sectionTitle)")
-//        return header
-//    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 36
-    }
-    
+
 }

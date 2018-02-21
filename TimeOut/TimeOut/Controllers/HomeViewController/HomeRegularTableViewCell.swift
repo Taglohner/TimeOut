@@ -3,19 +3,20 @@ import UIKit
 
 class HomeRegularTableViewCell: UITableViewCell {
     
-    var item: RestaurantCategoryViewModelItem? {
-        
-        // Cast the ProfileViewModelItem to appropriate item type
+    var restaurant: Restaurant? {
         
         didSet {
-            
-            guard let item = item as? ViewModelItemTypeBestValue else {
+            guard let restaurant = restaurant else {
                 return
             }
             
+            firstLabel.text = restaurant.name
             
-            
-            
+            if let imageName = restaurant.imageName {
+                mainImage.image = UIImage(named: imageName)
+            } else {
+                mainImage.image = UIImage(named: "foodPlaceholder")
+            }
         }
     }
     
@@ -28,46 +29,68 @@ class HomeRegularTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    let postImage: UIImageView = {
+    let mainImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
-        imageView.layer.cornerRadius = 8
+        imageView.backgroundColor = .yellow
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.masksToBounds = true
         return imageView
     }()
     
-    let postTitle: UILabel = {
+    let favoriteButton: UIButton = {
+        let button = UIButton()
+        //        button.backgroundColor = .red
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let firstLabel: UILabel = {
         let labelView = UILabel()
-        labelView.backgroundColor = .yellow
-        labelView.textAlignment = .natural
-        labelView.font = .boldSystemFont(ofSize: 16)
-        labelView.text = "Lorem lipsum"
-        labelView.numberOfLines = 2
+        //        labelView.backgroundColor = .blue
+        labelView.textAlignment = .justified
+        labelView.font = .boldSystemFont(ofSize: 18)
+        labelView.textColor = .black
+        labelView.text = "Restaurant Name"
         labelView.translatesAutoresizingMaskIntoConstraints = false
         return labelView
     }()
     
-    let postDate: UILabel = {
+    let secondLabel: UILabel = {
         let labelView = UILabel()
-        labelView.backgroundColor = .red
-        labelView.textAlignment = .left
-        labelView.font = .systemFont(ofSize: 12)
-        labelView.text = "Lorem lipsum"
-        labelView.numberOfLines = 2
+        //        labelView.backgroundColor = .red
+        labelView.textAlignment = .justified
+        labelView.font = .systemFont(ofSize: 14)
+        labelView.textColor = .darkGray
+        labelView.text = "Type - Cousine - £££"
+        labelView.translatesAutoresizingMaskIntoConstraints = false
+        return labelView
+    }()
+    
+    let thirdLabel: UILabel = {
+        let labelView = UILabel()
+        //        labelView.backgroundColor = .gray
+        labelView.textAlignment = .justified
+        labelView.font = .systemFont(ofSize: 14)
+        labelView.textColor = .black
+        labelView.text = "*****"
+        labelView.translatesAutoresizingMaskIntoConstraints = false
         return labelView
     }()
     
     func setupViews() {
         
-        self.selectionStyle = .none
+        let labelsStackView = UIStackView(arrangedSubviews: [firstLabel, secondLabel, thirdLabel])
+        labelsStackView.distribution = .fillProportionally
+        labelsStackView.axis = .vertical
+        labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        [postImage, postTitle, postDate].forEach { addSubview($0) }
+        [mainImage, labelsStackView].forEach { self.addSubview($0) }
+        mainImage.addSubview(favoriteButton)
         
-        postImage.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 6, left: 4, bottom: 6, right: 4), size: .init(width: 64, height: 64))
-        postTitle.anchor(top: postImage.topAnchor, leading: postImage.trailingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 40))
-        postDate.anchor(top: postTitle.bottomAnchor, leading: postTitle.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 2, left: 0, bottom: 0, right: 0), size: .init(width: 100, height: 20))
+        mainImage.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 10, left: 10, bottom: 0, right: 10), size: .init(width: 0, height: 174))
+        favoriteButton.anchor(top: mainImage.topAnchor, leading: nil, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 0, right: 12), size: .init(width: 35, height: 35))
+        labelsStackView.anchor(top: mainImage.bottomAnchor, leading: mainImage.leadingAnchor, bottom: bottomAnchor, trailing: mainImage.trailingAnchor, padding: .init(top: 10, left: 0, bottom: 10, right: 0))
     }
 }
 
