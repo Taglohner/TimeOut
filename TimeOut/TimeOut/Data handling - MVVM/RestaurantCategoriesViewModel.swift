@@ -59,20 +59,20 @@ extension RestaurantCategoryViewModel: UITableViewDelegate {
         
         switch item.type {
         case .bestRated:
-            return 256
+            return 320
         case .bestValue:
             return 150
         case .sponsored:
-            return 256
+            return 320
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let item = items[section]
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeader") as! HomeHeader
-        header.headerTitle = (" \(item.sectionTitle)")
-        return header
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let item = items[section]
+//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeader") as! HomeHeader
+//        header.headerTitle = (" \(item.sectionTitle)")
+//        return header
+//    }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 36
