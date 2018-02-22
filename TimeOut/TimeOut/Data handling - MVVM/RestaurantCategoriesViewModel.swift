@@ -6,6 +6,7 @@ class RestaurantCategoryViewModel: NSObject {
     
     override init() {
         super.init()
+        
         items.append(ViewModelItemTypeBestRated(restaurants: RestaurantCategory.restaurantsSampleData()))
         items.append(ViewModelItemTypeBestValue(restaurants: RestaurantCategory.restaurantsSampleData()))
         items.append(ViewModelItemTypeSponsored(restaurants: RestaurantCategory.restaurantsSampleData()))
@@ -65,12 +66,39 @@ extension RestaurantCategoryViewModel: UITableViewDelegate {
         
         switch item.type {
         case .bestRated:
-            return 300
+            return 246
         case .bestValue:
-            return 260
+            return 264
         case .sponsored:
-            return 300
+            return 246
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeader") as! HomeHeader
+        header.headerTitle = items[section].sectionTitle
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.section]
+        
+        switch item.type {
+            
+        case .bestRated:
+            print("bla")
+        case .bestValue:
+            print("bla")
+        case .sponsored:
+            print("bla")
+        }
+    }
 }

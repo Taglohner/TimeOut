@@ -22,21 +22,32 @@ class HomeHeader: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    let labelView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "My header"
         label.textAlignment = .left
         label.backgroundColor = .white
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 28)
+        label.font = UIFont.boldSystemFont(ofSize: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     func setupViews() {
 
-        addSubview(nameLabel)
-        nameLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 4, bottom: 0, right: 4))
+        addSubview(labelView)
+        labelView.addSubview(nameLabel)
+        
+        labelView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
+        
+        nameLabel.anchor(top: labelView.topAnchor, leading: labelView.leadingAnchor, bottom: labelView.bottomAnchor, trailing: labelView.trailingAnchor, padding: .init(top: 0, left: 12, bottom: 0, right: 0))
     }
 }
 
