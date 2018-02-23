@@ -107,11 +107,8 @@ class HomeRegularTableViewCell: UITableViewCell {
         
         [mainImage, firstStackView, secondStackView].forEach { self.addSubview($0) }
         mainImage.addSubview(favoriteButton)
-        
         mainImage.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 14, bottom: 0, right: 14), size: .init(width: 0, height: 174))
-        
         favoriteButton.anchor(top: mainImage.topAnchor, leading: nil, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 0, right: 12), size: .init(width: 35, height: 35))
-        
         firstStackView.anchor(top: mainImage.bottomAnchor, leading: mainImage.leadingAnchor, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 14, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 20))
         secondStackView.anchor(top: firstStackView.bottomAnchor, leading: firstStackView.leadingAnchor, bottom: bottomAnchor, trailing: firstStackView.trailingAnchor, padding: .init(top: 3, left: 0, bottom: 20, right: 0))
     }

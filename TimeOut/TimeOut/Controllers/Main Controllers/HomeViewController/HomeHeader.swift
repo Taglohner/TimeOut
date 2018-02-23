@@ -45,7 +45,7 @@ class HomeHeader: UITableViewHeaderFooterView {
         addSubview(labelView)
         labelView.addSubview(nameLabel)
         
-        labelView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 50))
+        labelView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
         
         nameLabel.anchor(top: labelView.topAnchor, leading: labelView.leadingAnchor, bottom: labelView.bottomAnchor, trailing: labelView.trailingAnchor, padding: .init(top: 0, left: 12, bottom: 0, right: 0))
     }
