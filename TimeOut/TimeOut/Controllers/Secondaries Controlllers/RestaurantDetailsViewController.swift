@@ -2,44 +2,76 @@
 
 import UIKit
 
-class RestaurantDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var tableView = UITableView()
+class RestaurantDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    var collectionView: UICollectionView!
+    let overviewCollectionViewCell = "overviewCollectionViewCell"
+    let reviewCollectionViewCell = "reviewCollectionViewCell"
+    let contactCollectionViewCell = "contactCollectionViewCell"
     
     var restaurant = Restaurant()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTable()
-        
+
+        setupCollectionView()
+        setupNavigationBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print(restaurant)
-    }
-    
-    func setupTable() {
+    func setupCollectionView() {
         
-        tableView.contentInset = UIEdgeInsetsMake(300, 0, 0, 0)
+        let layout = UICollectionViewFlowLayout()
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .green
+        collectionView.contentInset = UIEdgeInsetsMake(-64, 0, -49, 0)
+//        collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.isPagingEnabled = true
         
-        tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.grouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.delegate = self
-        tableView.dataSource = self
-        view.addSubview(tableView)
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.minimumLineSpacing = 0
+        }
+        
+        collectionView.register(OverviewCollectionViewCell.self, forCellWithReuseIdentifier: overviewCollectionViewCell)
+        collectionView.register(ReviewCollectionViewCell.self, forCellWithReuseIdentifier: reviewCollectionViewCell)
+        collectionView.register(ContactCollectionViewCell.self, forCellWithReuseIdentifier: contactCollectionViewCell)
+        
+        view.addSubview(collectionView)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+    func setupNavigationBar() {
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.backBarButtonItem?.isEnabled = true
+        navigationController?.navigationBar.isTranslucent = true
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let indexedArray = array[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        cell.textLabel?.text = indexedArray
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let identifier: String
+        
+        if indexPath.item == 1 {
+            identifier = overviewCollectionViewCell
+        } else if indexPath.item == 2 {
+            identifier = reviewCollectionViewCell
+        } else {
+            identifier = contactCollectionViewCell
+        }
+    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
 
 }

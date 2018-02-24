@@ -60,20 +60,20 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
             
         case .bestValue:
             
-//            var restaurant: Restaurant?
-//
-//            if let item = item as? ViewModelItemTypeBestValue {
-//                restaurant = item.restaurants[indexPath.row]
-//            }
-//
-//            let restaurantDetailsViewController = RestaurantDetailsViewController()
-//
-//            if let selectedRestaurant = restaurant {
-//                restaurantDetailsViewController.restaurant = selectedRestaurant
-//                navigationController?.present(restaurantDetailsViewController, animated: false, completion: nil)
-//            } else {
-//                return
-//            }
+            var restaurant: Restaurant?
+
+            if let item = item as? ViewModelItemTypeBestValue {
+                restaurant = item.restaurants[indexPath.row]
+            }
+
+            let restaurantDetailsViewController = RestaurantDetailsViewController()
+
+            if let selectedRestaurant = restaurant {
+                restaurantDetailsViewController.restaurant = selectedRestaurant
+                navigationController?.pushViewController(restaurantDetailsViewController, animated: true)
+            } else {
+                return
+            }
             
             print("bla")
             
