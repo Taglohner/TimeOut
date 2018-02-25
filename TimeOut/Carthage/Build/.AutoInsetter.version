@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.2.1",
+  "iOS" : [
+    {
+      "name" : "AutoInsetter",
+      "hash" : "e5d7c20e58b69a2cc96be88e797a4c2bcc8cbc387f152321fa946953507c21cf"
+    }
+  ]
+}

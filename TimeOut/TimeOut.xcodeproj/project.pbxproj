@@ -16,6 +16,14 @@
 		E7581ADF2040D3C9000F713F /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581ADE2040D3C9000F713F /* MenuBarCell.swift */; };
 		E7581AE12040D3DB000F713F /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AE02040D3DB000F713F /* ContentCell.swift */; };
 		E7581AE32040D3F8000F713F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AE22040D3F8000F713F /* AlbumCell.swift */; };
+		E7581AEE204270DD000F713F /* AutoInsetter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7581AEB204270DD000F713F /* AutoInsetter.framework */; };
+		E7581AEF204270DD000F713F /* Pageboy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7581AEC204270DD000F713F /* Pageboy.framework */; };
+		E7581AF0204270DD000F713F /* Tabman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7581AED204270DD000F713F /* Tabman.framework */; };
+		E7581AF320427355000F713F /* DetailsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF220427355000F713F /* DetailsPageController.swift */; };
+		E7581AF52042743E000F713F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF42042743E000F713F /* OverviewViewController.swift */; };
+		E7581AF720427451000F713F /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF620427451000F713F /* ReviewsViewController.swift */; };
+		E7581AF920427463000F713F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF820427463000F713F /* ContactViewController.swift */; };
+		E7581B29204331DD000F713F /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7581B27204331CF000F713F /* Hero.framework */; };
 		E78613F920322BFC0044F0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78613F720322BFC0044F0E1 /* LaunchScreen.storyboard */; };
 		E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140020322D2A0044F0E1 /* TabBarController.swift */; };
 		E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140420322D4F0044F0E1 /* AppDelegate.swift */; };
@@ -47,6 +55,15 @@
 		E7581ADE2040D3C9000F713F /* MenuBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
 		E7581AE02040D3DB000F713F /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		E7581AE22040D3F8000F713F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		E7581AEB204270DD000F713F /* AutoInsetter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AutoInsetter.framework; path = Carthage/Build/iOS/AutoInsetter.framework; sourceTree = "<group>"; };
+		E7581AEC204270DD000F713F /* Pageboy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pageboy.framework; path = Carthage/Build/iOS/Pageboy.framework; sourceTree = "<group>"; };
+		E7581AED204270DD000F713F /* Tabman.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tabman.framework; path = Carthage/Build/iOS/Tabman.framework; sourceTree = "<group>"; };
+		E7581AF220427355000F713F /* DetailsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPageController.swift; sourceTree = "<group>"; };
+		E7581AF42042743E000F713F /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		E7581AF620427451000F713F /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		E7581AF820427463000F713F /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		E7581AFB2042E22D000F713F /* ZoomTransitioning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomTransitioning.framework; path = Carthage/Build/iOS/ZoomTransitioning.framework; sourceTree = "<group>"; };
+		E7581B27204331CF000F713F /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
 		E78613EB20322BFC0044F0E1 /* TimeOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78613F820322BFC0044F0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E78613FA20322BFC0044F0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7581AEE204270DD000F713F /* AutoInsetter.framework in Frameworks */,
+				E7581AEF204270DD000F713F /* Pageboy.framework in Frameworks */,
+				E7581B29204331DD000F713F /* Hero.framework in Frameworks */,
+				E7581AF0204270DD000F713F /* Tabman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,11 +113,35 @@
 			path = FavoritesViewController;
 			sourceTree = "<group>";
 		};
+		E7581AEA204270DD000F713F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7581B27204331CF000F713F /* Hero.framework */,
+				E7581AFB2042E22D000F713F /* ZoomTransitioning.framework */,
+				E7581AEB204270DD000F713F /* AutoInsetter.framework */,
+				E7581AEC204270DD000F713F /* Pageboy.framework */,
+				E7581AED204270DD000F713F /* Tabman.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7581AFA204278FE000F713F /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				E78B195B203EFDAD0038F7B2 /* VenueDetailsController.swift */,
+				E7581ADE2040D3C9000F713F /* MenuBarCell.swift */,
+				E7581AE02040D3DB000F713F /* ContentCell.swift */,
+				E7581AE22040D3F8000F713F /* AlbumCell.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
 		E78613E220322BFC0044F0E1 = {
 			isa = PBXGroup;
 			children = (
 				E78613ED20322BFC0044F0E1 /* TimeOut */,
 				E78613EC20322BFC0044F0E1 /* Products */,
+				E7581AEA204270DD000F713F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,10 +250,11 @@
 		E78B195D203EFDB10038F7B2 /* Secondaries Controlllers */ = {
 			isa = PBXGroup;
 			children = (
-				E78B195B203EFDAD0038F7B2 /* VenueDetailsController.swift */,
-				E7581ADE2040D3C9000F713F /* MenuBarCell.swift */,
-				E7581AE02040D3DB000F713F /* ContentCell.swift */,
-				E7581AE22040D3F8000F713F /* AlbumCell.swift */,
+				E7581AF220427355000F713F /* DetailsPageController.swift */,
+				E7581AF42042743E000F713F /* OverviewViewController.swift */,
+				E7581AF620427451000F713F /* ReviewsViewController.swift */,
+				E7581AF820427463000F713F /* ContactViewController.swift */,
+				E7581AFA204278FE000F713F /* Backup */,
 			);
 			path = "Secondaries Controlllers";
 			sourceTree = "<group>";
@@ -223,6 +269,7 @@
 				E78613E720322BFC0044F0E1 /* Sources */,
 				E78613E820322BFC0044F0E1 /* Frameworks */,
 				E78613E920322BFC0044F0E1 /* Resources */,
+				E7581AF120427101000F713F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,6 +326,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7581AF120427101000F713F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AutoInsetter.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Pageboy.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Tabman.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E78613E720322BFC0044F0E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,6 +359,8 @@
 				53D77624203344730030D0AE /* FavoritesTableViewController.swift in Sources */,
 				E7581ADF2040D3C9000F713F /* MenuBarCell.swift in Sources */,
 				53CE3B102035A78B001C2EC4 /* RestaurantCategoryViewModelItem.swift in Sources */,
+				E7581AF320427355000F713F /* DetailsPageController.swift in Sources */,
+				E7581AF52042743E000F713F /* OverviewViewController.swift in Sources */,
 				E786141620322E310044F0E1 /* SearchCollectionViewController + DelegateFlowLayout.swift in Sources */,
 				E786140E20322DBF0044F0E1 /* HomeTableCollectionViewCell.swift in Sources */,
 				E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */,
@@ -302,6 +371,7 @@
 				E786141F20322E6B0044F0E1 /* MyProfileTableViewContoller + DataSource.swift in Sources */,
 				E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */,
 				53CE3B122035A813001C2EC4 /* RestaurantCategoriesViewModel.swift in Sources */,
+				E7581AF720427451000F713F /* ReviewsViewController.swift in Sources */,
 				E786142320322F370044F0E1 /* SearchCollectionViewController + DataSource.swift in Sources */,
 				E7581AE12040D3DB000F713F /* ContentCell.swift in Sources */,
 				E786142020322E6B0044F0E1 /* Header.swift in Sources */,
@@ -310,6 +380,7 @@
 				E786140720322D4F0044F0E1 /* Extensions.swift in Sources */,
 				E78B1959203ECF0C0038F7B2 /* HomeTableViewController.swift in Sources */,
 				E7581AE32040D3F8000F713F /* AlbumCell.swift in Sources */,
+				E7581AF920427463000F713F /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +511,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXU3FLSZ5B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TimeOut/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = steven.taglohner.TimeOut;
@@ -455,6 +530,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXU3FLSZ5B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TimeOut/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = steven.taglohner.TimeOut;

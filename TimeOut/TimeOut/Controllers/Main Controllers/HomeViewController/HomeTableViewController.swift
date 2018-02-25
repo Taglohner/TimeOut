@@ -66,7 +66,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
             
         case .bestValue:
             
-            let venue = VenueDetailsController()
+            let venue = DetailsPageController()
 
             navigationController?.pushViewController(venue, animated: true)
 
@@ -76,6 +76,5 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
 
         }
     }
-    
-    
 }
+

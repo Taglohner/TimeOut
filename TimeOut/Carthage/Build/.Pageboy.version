@@ -1,0 +1,21 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "Pageboy",
+      "hash" : "5db0f6681d4a8adbdaac40329d04d318a46b88619080f67b26366c50e6e4276a"
+    }
+  ],
+  "commitish" : "2.4.0",
+  "iOS" : [
+    {
+      "name" : "Pageboy",
+      "hash" : "b5bd7c28862094d94939359c7217d4d39431ae707268f5095f77cf89126904d5"
+    }
+  ]
+}
