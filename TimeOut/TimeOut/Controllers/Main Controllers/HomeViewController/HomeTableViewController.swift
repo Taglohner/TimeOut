@@ -8,7 +8,11 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTable()
+        setupNavigationBar()
+    }
+    
+    func setupTable() {
         tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.grouped)
         
         tableView.dataSource = viewModel
@@ -18,8 +22,12 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: "HomeHeader")
         
         tableView.separatorStyle = .none
-//        tableView.backgroundColor = .gray
+        
         view.addSubview(tableView)
+    }
+    
+    func setupNavigationBar() {
+        self.navigationController?.navigationBar.setBottomBorderColor(color: .white, height: 2)
         self.navigationController?.navigationBar.barTintColor = .white
     }
     
@@ -54,29 +62,14 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
             
         case .bestRated:
             
-            
             print("bla")
-            
             
         case .bestValue:
             
-            var restaurant: Restaurant?
+            let venue = VenueDetailsController()
 
-            if let item = item as? ViewModelItemTypeBestValue {
-                restaurant = item.restaurants[indexPath.row]
-            }
+            navigationController?.pushViewController(venue, animated: true)
 
-            let restaurantDetailsViewController = RestaurantDetailsViewController()
-
-            if let selectedRestaurant = restaurant {
-                restaurantDetailsViewController.restaurant = selectedRestaurant
-                navigationController?.pushViewController(restaurantDetailsViewController, animated: true)
-            } else {
-                return
-            }
-            
-            print("bla")
-            
         case .sponsored:
             
             print("bla")

@@ -96,3 +96,26 @@ extension String {
         return nil
     }
 }
+
+extension UIView {
+    func addConstraintsWithFormat(_ format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
+        }
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+    }
+}
+
+extension UINavigationBar {
+    
+    func setBottomBorderColor(color: UIColor, height: CGFloat) {
+        let bottomBorderRect = CGRect(x: 0, y: frame.height, width: frame.width, height: height)
+        let bottomBorderView = UIView(frame: bottomBorderRect)
+        bottomBorderView.backgroundColor = color
+        addSubview(bottomBorderView)
+    }
+}

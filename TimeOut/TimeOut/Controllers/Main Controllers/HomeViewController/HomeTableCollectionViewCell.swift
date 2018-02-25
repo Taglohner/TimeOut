@@ -14,7 +14,7 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
                 return
             }
             items = item
-            //            headerLabel.text = item.sectionTitle
+
             featuredCollectionView.reloadData()
         }
     }
@@ -50,12 +50,8 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
         
         [featuredCollectionView].forEach { addSubview($0) }
         
-        //        headerLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 14, bottom: 0, right: 14), size: .init(width: 0, height: 50))
-        
         featuredCollectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
     }
-    
-    // Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let count = items?.restaurants.count else {
@@ -88,6 +84,7 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
 class HomeCollectionViewCell: UICollectionViewCell {
     
     var restaurant: Restaurant? {
+        
         // Cast the ProfileViewModelItem to appropriate item type
         
         didSet {
@@ -117,7 +114,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     let mainImage: UIImageView = {
         let imageView = UIImageView()
         //        imageView.backgroundColor = .yellow
-        //        imageView.layer.cornerRadius = 0
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.masksToBounds = true
