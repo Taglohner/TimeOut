@@ -21,7 +21,4 @@ extension MyProfileTableViewContoller {
         // DO SOMETHING
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "RootHeader")
-//    }
 }

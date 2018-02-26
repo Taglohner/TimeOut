@@ -1,4 +1,5 @@
 import UIKit
+import Hero
 
 class HomeTableViewController: UIViewController, UITableViewDelegate {
     
@@ -66,9 +67,10 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
             
         case .bestValue:
             
-            let venue = DetailsPageController()
+            let venue = DetailsTableViewController()
 
-            navigationController?.pushViewController(venue, animated: true)
+//            navigationController?.pushViewController(venue, animated: true)
+            self.showDetailViewController(venue, sender: self)
 
         case .sponsored:
             
