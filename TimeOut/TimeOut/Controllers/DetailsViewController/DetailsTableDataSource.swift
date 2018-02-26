@@ -15,11 +15,13 @@ extension DetailsTableViewController: UITableViewDataSource {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! DetailsPhotoAlbumCell
+            cell.hero.id = "photoAlbum"
             return cell
         } else {
             return UITableViewCell()
         }
     }
+    
     
 
 }

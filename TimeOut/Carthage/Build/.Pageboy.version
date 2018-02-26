@@ -8,14 +8,14 @@
   "tvOS" : [
     {
       "name" : "Pageboy",
-      "hash" : "5db0f6681d4a8adbdaac40329d04d318a46b88619080f67b26366c50e6e4276a"
+      "hash" : "1817b0f67f985698ddbed95d80142ecebbcc97037b3ca4fbd666d2d35654ef9b"
     }
   ],
   "commitish" : "2.4.0",
   "iOS" : [
     {
       "name" : "Pageboy",
-      "hash" : "b5bd7c28862094d94939359c7217d4d39431ae707268f5095f77cf89126904d5"
+      "hash" : "4624bce0f140e8f118343d4f6228149ac2984a21b8971b625c732ef697177038"
     }
   ]
 }

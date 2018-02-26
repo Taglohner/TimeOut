@@ -1,3 +1,4 @@
 github "uias/Pageboy" ~> 2.0
 github "uias/Tabman" ~> 1.0
 github "lkzhao/Hero"
+github "zvonicek/ImageSlideshow" ~> 1.5

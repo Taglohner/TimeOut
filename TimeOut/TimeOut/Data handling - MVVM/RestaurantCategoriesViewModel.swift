@@ -1,5 +1,6 @@
 
 import UIKit
+import Hero
 
 class RestaurantCategoryViewModel: NSObject {
     var items = [RestaurantCategoryViewModelItem]()
@@ -48,6 +49,7 @@ extension RestaurantCategoryViewModel: UITableViewDataSource {
 
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeRegularTableViewCell", for: indexPath) as! HomeRegularTableViewCell
             cell.restaurant = restaurant
+            cell.hero.id = "photoAlbum"
             return cell
             
         case .sponsored:

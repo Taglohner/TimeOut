@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.5.1",
+  "iOS" : [
+    {
+      "name" : "ImageSlideshow",
+      "hash" : "f79aeed58ef1f11c7b67314286e80d0dfb7e259dd758842fb125d104edd4dc96"
+    }
+  ]
+}

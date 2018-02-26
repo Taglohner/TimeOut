@@ -29,6 +29,7 @@
 		E7581AF720427451000F713F /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF620427451000F713F /* ReviewsViewController.swift */; };
 		E7581AF920427463000F713F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7581AF820427463000F713F /* ContactViewController.swift */; };
 		E7581B29204331DD000F713F /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7581B27204331CF000F713F /* Hero.framework */; };
+		E777C2B62044469A002261F2 /* ImageSlideshow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E777C2B52044469A002261F2 /* ImageSlideshow.framework */; };
 		E78613F920322BFC0044F0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78613F720322BFC0044F0E1 /* LaunchScreen.storyboard */; };
 		E786140120322D2A0044F0E1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140020322D2A0044F0E1 /* TabBarController.swift */; };
 		E786140620322D4F0044F0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E786140420322D4F0044F0E1 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		E7581AF820427463000F713F /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		E7581AFB2042E22D000F713F /* ZoomTransitioning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZoomTransitioning.framework; path = Carthage/Build/iOS/ZoomTransitioning.framework; sourceTree = "<group>"; };
 		E7581B27204331CF000F713F /* Hero.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hero.framework; path = Carthage/Build/iOS/Hero.framework; sourceTree = "<group>"; };
+		E777C2B52044469A002261F2 /* ImageSlideshow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageSlideshow.framework; path = Carthage/Build/iOS/ImageSlideshow.framework; sourceTree = "<group>"; };
 		E78613EB20322BFC0044F0E1 /* TimeOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78613F820322BFC0044F0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E78613FA20322BFC0044F0E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E777C2B62044469A002261F2 /* ImageSlideshow.framework in Frameworks */,
 				E7581AEE204270DD000F713F /* AutoInsetter.framework in Frameworks */,
 				E7581AEF204270DD000F713F /* Pageboy.framework in Frameworks */,
 				E7581B29204331DD000F713F /* Hero.framework in Frameworks */,
@@ -134,6 +137,7 @@
 		E7581AEA204270DD000F713F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E777C2B52044469A002261F2 /* ImageSlideshow.framework */,
 				E7581B27204331CF000F713F /* Hero.framework */,
 				E7581AFB2042E22D000F713F /* ZoomTransitioning.framework */,
 				E7581AEB204270DD000F713F /* AutoInsetter.framework */,
@@ -357,6 +361,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Pageboy.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Tabman.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Hero.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ImageSlideshow.framework",
 			);
 			outputPaths = (
 			);

@@ -1,4 +1,4 @@
-
+import Hero
 import UIKit
 
 class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

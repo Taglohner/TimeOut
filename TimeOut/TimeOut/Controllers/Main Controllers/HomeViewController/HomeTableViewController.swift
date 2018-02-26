@@ -7,10 +7,14 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
     fileprivate let viewModel = RestaurantCategoryViewModel()
     var restaurant: Restaurant?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTable()
         setupNavigationBar()
+        
+        self.hero.isEnabled = true
     }
     
     func setupTable() {
@@ -28,6 +32,8 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupNavigationBar() {
+//        self.navigationController?.isNavigationBarHidden = true
+
         self.navigationController?.navigationBar.setBottomBorderColor(color: .white, height: 2)
         self.navigationController?.navigationBar.barTintColor = .white
     }
@@ -68,9 +74,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         case .bestValue:
             
             let venue = DetailsTableViewController()
-
-//            navigationController?.pushViewController(venue, animated: true)
-            self.showDetailViewController(venue, sender: self)
+            self.present(venue, animated: true, completion: nil)
 
         case .sponsored:
             

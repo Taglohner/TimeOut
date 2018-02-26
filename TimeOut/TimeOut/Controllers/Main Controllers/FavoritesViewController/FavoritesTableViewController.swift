@@ -5,6 +5,9 @@ class FavoritesTableViewController: UITableViewController {
     
     // MARK: Properties
     
+    @IBOutlet weak var button: UIButton!
+    
+    
     let customLightGray = UIColor(r: 236, g: 236, b: 236, alpha: 1)
     
     var topRefreshControl = UIRefreshControl()
@@ -12,6 +15,7 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         tableView.refreshControl = topRefreshControl
         tableView.separatorStyle = .none
         tableView.sectionHeaderHeight = 28
@@ -25,6 +29,8 @@ class FavoritesTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 340
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+
+  
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if topRefreshControl.isRefreshing {
