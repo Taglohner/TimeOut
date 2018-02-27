@@ -5,7 +5,10 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
+        
+        self.tabBar.barTintColor = .white
+        self.tabBar.isTranslucent = false
+        
         let homeTableViewController = HomeTableViewController()
         homeTableViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 0)
         
@@ -23,5 +26,7 @@ class TabBarController: UITabBarController {
         viewControllers = viewControllerList.map {
             UINavigationController(rootViewController: $0)
         }
+        
+        
     }
 }

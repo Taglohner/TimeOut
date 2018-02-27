@@ -5,7 +5,7 @@ import Hero
 
 import UIKit
 
-class DetailsTableViewController: UIViewController  {
+class DetailsTableViewController: UIViewController, UIScrollViewDelegate  {
     
     var tableView = UITableView()
     let identifier = "detailsCell"
@@ -14,8 +14,7 @@ class DetailsTableViewController: UIViewController  {
         super.viewDidLoad()
         
         self.hero.isEnabled = true
-  
-        self.hero.modalAnimationType = .selectBy(presenting: .slide(direction: .up), dismissing: .slide(direction: .down))
+        self.hero.modalAnimationType = .selectBy(presenting: .zoom, dismissing: .zoomOut)
         setupTableView()
     }
     
@@ -26,29 +25,46 @@ class DetailsTableViewController: UIViewController  {
         return button
     }()
     
-    func setupTableView() {
-        
-        tableView = UITableView(frame: view.frame, style: .plain)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
-        tableView.separatorStyle = .none
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+
+    func setupTableView() {
+    
+        tableView = UITableView(frame: view.frame, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .white
         tableView.register(DetailsPhotoAlbumCell.self, forCellReuseIdentifier: identifier)
-        
+        tableView.scrollIndicatorInsets = .zero
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         [tableView, backButton].forEach { view.addSubview($0) }
-        
         backButton.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil
             , trailing: nil, padding: .init(top: 20, left: 20, bottom: 0, right: 0), size: .init(width: 60, height: 40))
         backButton.addTarget(self, action: #selector(backToPrevious), for: .touchUpInside)
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.contentInset = .zero
+        tableView.bounces = false
     }
     
     func setupNavigationbar() {
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @objc func backToPrevious() {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 

@@ -47,7 +47,6 @@ class DetailsPhotoAlbumCell: UITableViewCell {
     
     func setupViews() {
         [baseView].forEach { addSubview($0) }
-        
         baseView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
 }
