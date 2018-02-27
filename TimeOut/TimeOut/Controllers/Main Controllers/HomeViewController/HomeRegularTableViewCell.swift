@@ -34,7 +34,6 @@ class HomeRegularTableViewCell: UITableViewCell {
     let mainImage: UIImageView = {
         let imageView = UIImageView()
         //        imageView.backgroundColor = .yellow
-        //        imageView.layer.cornerRadius = 0
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.masksToBounds = true
@@ -61,7 +60,7 @@ class HomeRegularTableViewCell: UITableViewCell {
     
     let secondLabel: UILabel = {
         let labelView = UILabel()
-        //        labelView.backgroundColor = .red
+        //        labelView.backgroundColor = .blue
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 13)
         labelView.textColor = .darkGray
@@ -75,8 +74,8 @@ class HomeRegularTableViewCell: UITableViewCell {
         //        labelView.backgroundColor = .gray
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 13)
-        labelView.textColor = .gray
-        labelView.text = "★★★☆☆"
+        labelView.textColor = .darkGray
+        labelView.text = "Review - review"
         labelView.translatesAutoresizingMaskIntoConstraints = false
         return labelView
     }()
@@ -92,6 +91,55 @@ class HomeRegularTableViewCell: UITableViewCell {
         return labelView
     }()
     
+    let badgeView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewOne: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewTwo: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewThree: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewFour: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewSix: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
+    let badgeViewSeven: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .gray
+        return view
+    }()
+    
     func setupViews() {
         
         let firstStackView = UIStackView(arrangedSubviews: [firstLabel, rightLabel])
@@ -100,18 +148,39 @@ class HomeRegularTableViewCell: UITableViewCell {
         firstStackView.axis = .horizontal
         firstStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        let secondStackView = UIStackView(arrangedSubviews: [secondLabel, thirdLabel])
+        let secondStackView = UIStackView(arrangedSubviews: [badgeView, badgeViewOne, badgeViewTwo, badgeViewThree, badgeViewFour, badgeViewSix, badgeViewSeven])
         secondStackView.distribution = .fillProportionally
-        secondStackView.spacing = 3
-        secondStackView.axis = .vertical
+        secondStackView.alignment = .fill
+        secondStackView.spacing = 4
+        secondStackView.axis = .horizontal
         secondStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        [mainImage, firstStackView, secondStackView].forEach { self.addSubview($0) }
+        let thirdStackView = UIStackView(arrangedSubviews: [firstStackView, secondLabel, thirdLabel, secondStackView])
+        thirdStackView.distribution = .equalSpacing
+        thirdStackView.alignment = .fill
+        //        thirdStackView.spacing = 2
+        thirdStackView.axis = .vertical
+        thirdStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        [mainImage, thirdStackView].forEach { self.addSubview($0) }
         mainImage.addSubview(favoriteButton)
+        
         mainImage.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 14, bottom: 0, right: 14), size: .init(width: 0, height: 174))
-        favoriteButton.anchor(top: mainImage.topAnchor, leading: nil, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 0, right: 12), size: .init(width: 35, height: 35))
-        firstStackView.anchor(top: mainImage.bottomAnchor, leading: mainImage.leadingAnchor, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 14, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 20))
-        secondStackView.anchor(top: firstStackView.bottomAnchor, leading: firstStackView.leadingAnchor, bottom: bottomAnchor, trailing: firstStackView.trailingAnchor, padding: .init(top: 3, left: 0, bottom: 20, right: 0))
+        favoriteButton.anchor(top: mainImage.topAnchor, leading: nil, bottom: nil, trailing: mainImage.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 0, right: 12), size: .init(width: 34, height: 34))
+        
+        firstStackView.anchor(top: nil, leading: thirdStackView.leadingAnchor, bottom: nil, trailing: thirdStackView.trailingAnchor, size: .init(width: 0, height: 24))
+        secondLabel.anchor(top: nil, leading: thirdLabel.leadingAnchor, bottom: nil, trailing: thirdStackView.trailingAnchor, size: .init(width: 0, height: 17))
+        thirdLabel.anchor(top: nil, leading: thirdStackView.leadingAnchor, bottom: nil, trailing: thirdStackView.trailingAnchor, size: .init(width: 0, height: 17))
+        secondStackView.anchor(top: nil, leading: thirdStackView.leadingAnchor, bottom: nil, trailing: thirdStackView.trailingAnchor, size: .init(width: 0, height: 23))
+        thirdStackView.anchor(top: mainImage.bottomAnchor, leading: mainImage.leadingAnchor, bottom: bottomAnchor, trailing: mainImage.trailingAnchor, padding: .init(top: 14, left: 0, bottom: 28, right: 0))
+        
+        badgeView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, size: .init(width: 0, height: 23))
+        badgeViewOne.anchorSize(to: badgeView)
+        badgeViewTwo.anchorSize(to: badgeView)
+        badgeViewThree.anchorSize(to: badgeView)
+        badgeViewFour.anchorSize(to: badgeView)
+        badgeViewSix.anchorSize(to: badgeView)
+        badgeViewSeven.anchorSize(to: badgeView)
     }
 }
 

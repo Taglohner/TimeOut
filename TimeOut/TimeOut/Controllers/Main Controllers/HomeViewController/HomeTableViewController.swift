@@ -65,11 +65,11 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         
         switch item.type {
         case .bestRated:
-            return 246
+            return 290
         case .bestValue:
-            return 264
+            return 308
         case .sponsored:
-            return 246
+            return 290
         }
     }
     
