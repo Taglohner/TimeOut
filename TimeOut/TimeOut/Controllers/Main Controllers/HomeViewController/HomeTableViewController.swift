@@ -22,8 +22,13 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         tableView.delegate = self
         tableView.register(HomeRegularTableViewCell.self, forCellReuseIdentifier: "homeRegularTableViewCell")
         tableView.register(HomeTableCollectionViewCell.self, forCellReuseIdentifier: "homeTableCollectionViewCell")
+        tableView.register(OffersStyleCell.self, forCellReuseIdentifier: "offersStyleCell")
         tableView.register(HomeHeader.self, forHeaderFooterViewReuseIdentifier: "HomeHeader")
+        
+        
         tableView.separatorStyle = .none
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
         view.addSubview(tableView)
     }
     
@@ -41,7 +46,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         
         UIApplication.shared.statusBarStyle = .default
         self.tabBarController?.setTabBarVisible(visible: true, animated: true)
-
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -50,14 +55,12 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupNavigationBar() {
-
+        
         self.navigationController?.navigationBar.setBottomBorderColor(color: .white, height: 2)
         self.navigationController?.navigationBar.barTintColor = .white
-//        self.navigationController?.hidesBarsOnSwipe = true
+        //        self.navigationController?.hidesBarsOnSwipe = true
         
-
-
-    
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -70,12 +73,16 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
             return 308
         case .sponsored:
             return 290
+        case .offers:
+            return 200
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeHeader") as! HomeHeader
+        
         header.headerTitle = viewModel.items[section].sectionTitle
+        
         return header
     }
     
@@ -88,21 +95,16 @@ class HomeTableViewController: UIViewController, UITableViewDelegate {
         let item = viewModel.items[indexPath.section]
         
         switch item.type {
-            
         case .bestRated:
-            
             print("bla")
-            
         case .bestValue:
-            
-            let venue = DetailsTableViewController()
-//            self.present(venue, animated: true, completion: nil)
+            let venue = DetailsViewController()
+            //            self.present(venue, animated: true, completion: nil)
             navigationController?.present(venue, animated: true, completion: nil)
-
         case .sponsored:
-            
             print("bla")
-
+        case .offers:
+            print("bla")
         }
     }
 }

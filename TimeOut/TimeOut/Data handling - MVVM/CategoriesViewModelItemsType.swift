@@ -61,5 +61,25 @@ class ViewModelItemTypeBestValue: RestaurantCategoryViewModelItem {
     }
 }
 
+class ViewModelItemTypeOffers: RestaurantCategoryViewModelItem {
+    var type: CategoryModelItemType {
+        return .offers
+    }
+    
+    var sectionTitle: String {
+        return "Offers"
+    }
+    
+    var rowCount: Int {
+        return 1
+    }
+    
+    var restaurants: [Restaurant]
+    
+    init(restaurants: [Restaurant]) {
+        self.restaurants = restaurants
+    }
+}
+
 
 

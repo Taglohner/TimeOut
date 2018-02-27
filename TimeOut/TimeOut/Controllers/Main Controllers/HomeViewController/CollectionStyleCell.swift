@@ -14,7 +14,7 @@ class HomeTableCollectionViewCell: UITableViewCell, UICollectionViewDataSource, 
                 return
             }
             items = item
-
+            
             featuredCollectionView.reloadData()
         }
     }
@@ -140,7 +140,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let secondLabel: UILabel = {
         let labelView = UILabel()
-//        labelView.backgroundColor = .blue
+        //        labelView.backgroundColor = .blue
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 13)
         labelView.textColor = .darkGray
@@ -151,7 +151,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     let thirdLabel: UILabel = {
         let labelView = UILabel()
-//        labelView.backgroundColor = .gray
+        //        labelView.backgroundColor = .gray
         labelView.textAlignment = .justified
         labelView.font = .systemFont(ofSize: 13)
         labelView.textColor = .darkGray
@@ -238,7 +238,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         let thirdStackView = UIStackView(arrangedSubviews: [firstStackView, secondLabel, thirdLabel, secondStackView])
         thirdStackView.distribution = .equalSpacing
         thirdStackView.alignment = .fill
-//        thirdStackView.spacing = 2
+        //        thirdStackView.spacing = 2
         thirdStackView.axis = .vertical
         thirdStackView.translatesAutoresizingMaskIntoConstraints = false
         

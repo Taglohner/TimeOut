@@ -1,21 +1,23 @@
 
 import UIKit
-import Hero
 import ImageSlideshow
 
-class DetailsPhotoAlbumCell: UITableViewCell {
+class OffersStyleCell: UITableViewCell {
     
-    var pictures: [UIImage]? {
+    var items: ViewModelItemTypeOffers?
+    var item: RestaurantCategoryViewModelItem? {
+        
         didSet {
             
-            guard let pictures = pictures else {
+            guard let item = item as? ViewModelItemTypeOffers else {
                 return
             }
             
-  
+            items = item
+
         }
     }
-    
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
@@ -24,10 +26,9 @@ class DetailsPhotoAlbumCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        
     }
     
-    let baseView: ImageSlideshow = {
+    let imageSlideView: ImageSlideshow = {
         let view = ImageSlideshow()
         view.setImageInputs([
             
@@ -36,7 +37,7 @@ class DetailsPhotoAlbumCell: UITableViewCell {
             ImageSource(image: UIImage(named: "mobile_picture_02202018_233519")!),
             ImageSource(image: UIImage(named: "mobile_picture_02202018_222018")!)
             
-        ])
+            ])
         
         view.backgroundColor = .white
         view.slideshowInterval = 3
@@ -46,8 +47,8 @@ class DetailsPhotoAlbumCell: UITableViewCell {
     }()
     
     func setupViews() {
-        [baseView].forEach { addSubview($0) }
-        baseView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        addSubview(imageSlideView)
+        imageSlideView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
+    
 }
-

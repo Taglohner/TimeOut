@@ -17,4 +17,5 @@ enum CategoryModelItemType {
     case sponsored
     case bestValue
     case bestRated
+    case offers
 }

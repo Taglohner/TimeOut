@@ -1,10 +1,10 @@
 
 import UIKit
 
-extension DetailsTableViewController: UITableViewDelegate{
+extension DetailsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -12,5 +12,6 @@ extension DetailsTableViewController: UITableViewDelegate{
     }
     
 }
+
 
 
